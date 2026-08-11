@@ -17,3 +17,7 @@ npm-debug.log*
 # Env
 .env
 .env.local
+
+# Video assets (filesystem-only, not versioned)
+backend/videos/*
+!backend/videos/.gitkeep
