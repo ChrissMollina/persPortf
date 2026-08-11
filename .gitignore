@@ -21,3 +21,6 @@ npm-debug.log*
 # Video assets (filesystem-only, not versioned)
 backend/videos/*
 !backend/videos/.gitkeep
+
+# docs
+uploading.videos.md
