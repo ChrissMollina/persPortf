@@ -1,7 +1,10 @@
 # API route definitions for the portfolio
-from flask import Blueprint, jsonify
+import os
+
+from flask import Blueprint, abort, jsonify, send_from_directory
 
 from backend.data import profileData, projectList
+from backend.videos import allowedExtensions, listVideos, videosDir
 
 # Group all API endpoints under /api
 apiBlueprint = Blueprint("api", __name__, url_prefix="/api")
@@ -23,3 +26,19 @@ def get_profile():
 @apiBlueprint.get("/projects")
 def get_projects():
     return jsonify(projectList)
+
+
+# Return the featured video showcase list
+@apiBlueprint.get("/videos")
+def get_videos():
+    return jsonify(listVideos())
+
+
+# Stream a single video file, supporting Range requests
+@apiBlueprint.get("/videos/<fileName>")
+def get_video_file(fileName):
+    # Reject anything outside the whitelisted extensions
+    if os.path.splitext(fileName)[1].lower() not in allowedExtensions:
+        abort(404)
+
+    return send_from_directory(videosDir, fileName)
