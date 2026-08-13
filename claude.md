@@ -2,7 +2,8 @@
 
 # Requirements 
 - Keep codebase simple, make it representative of SOLID programming practices
-- Follow variable declaration -> makeVar
+- Follow KISS: Keep it simple stupid
+- Follow variable declaration -> camelCase
 - Include single line commenting defining code chunk purpose, no more than 60 chars long
 - Color scheme should follow: Taupe #483C32 and Wheat #F5DEB3
 - Frontend -> React(javaScript)

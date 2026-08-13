@@ -24,3 +24,5 @@ backend/videos/*
 
 # docs
 uploading.videos.md
+deploying.portf.md
+routing.placards.md

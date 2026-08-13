@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(echo \"Frontend PID: $!\")",
+      "Bash(curl -s http://127.0.0.1:5001/api/health)",
+      "Bash(curl -s http://127.0.0.1:5001/api/profile)",
+      "Bash(python3 -m json.tool --no-ensure-ascii)"
+    ]
+  }
+}
