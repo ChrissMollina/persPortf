@@ -1,0 +1,16 @@
+# Upload only what the API image needs to Cloud Build
+.git/
+.gitignore
+.gcloudignore
+.claude/
+.firebase/
+.firebaserc
+firebase.json
+.DS_Store
+venv/
+__pycache__/
+*.py[cod]
+frontend/
+docs/
+README.md
+CLAUDE.md
